@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ron Burch</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,400,400i" rel="stylesheet">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 18pt;
+    line-height: 140%;
+    font-weight: 200;
+    letter-spacing: 0.025em;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+  }
+  p {
+    font-size: inherit;
+  }
+
+  /*p:first-child::first-letter {
+    font-size: 170%;
+  }*/
+
+  section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2% 5%;
+  }
+
+  section > :nth-child(1) {
+    min-width: 180px;
+    padding-right: 20px;
+    font-size: 24pt;
+    font-weight: 400;
+    font-variant-caps: small-caps;
+    margin: 0;
+  }
+
+  section > :nth-child(2) {
+    border-left: 0.5px solid;
+    padding-left: 4%;
+    max-width: 1200px;
+  }
+
+  main > * {
+    background: url("grain.png");
+  }
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+      main > * {
+        background-size: 500px 500px;
+      }
+    }
+
+  main > :nth-child(1) {
+    background-color: #dbae58;
+  }
+  main > :nth-child(2) {
+    background-color: #4b585c;
+  }
+  main > :nth-child(3) {
+    background-color: #488a99;
+  }
+  main > :nth-child(4) {
+    background-color: #b4b4b4;
+  }
+
+  main > :nth-child(1), main > :nth-child(4) {
+    color: black;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+
+  figure {
+    padding: 3%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1em ;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .5);
+  }
+
+  figure > img {
+    width: 20%;
+    height: 20%;
+  }
+
+  img {
+    width: 33%;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.2em;
+    display: block;
+  }
+
+  .button {
+    display: block;
+    max-width: 270px;
+    color: white;
+    /*background-color: rgba(0,0,0,0.8);*/
+    background-color: #4b585c;
+    /*padding: 10px;*/
+    font-weight: 400;
+    /*max-width: 80%;*/
+    text-decoration: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .iterative {
+    width: 66%;
+  }
+
+  dl {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+  }
+
+  dt {
+    min-width: 6.5em;
+    font-weight: bold;
+  }
+
+  dd {
+    min-width: 51%;
+    margin-left: 0.5em;
+  }
+
+  dd > p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  a:active {
+    box-shadow: none;
+  }
+
+  a:active:not(.button) {
+    padding-top: 2px;
+  }
+
+  .portrait {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+    border: solid 3px white;
+    padding: 0;
+    border-radius: 5px;
+  }
+
+  /*@media (max-width: 740px) {
+    dl {
+      flex-flow: column;
+    }
+  }*/
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 14pt;
+    }
+    dl {
+      flex-flow: column;
+    }
+    section {
+      flex-flow: column;
+      width: 100%;
+    }
+    img {
+      width: 50%;
+    }
+    figure > img {
+      width: 50%;
+      height: 20%;
+    }
+    h1 {
+      padding-top: 0.5em;
+      text-align: left;
+    }
+    h2 {
+      font-size: 14pt;
+    }
+    section > :nth-child(2) {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+  }
+
+  footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      height: 3em;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<main>
+<section id="über-mich" class="level1">
+<h1>Über mich</h1>
+<div>
+<p>Gerne schicke ich Ihnen ein ausführliches Curriculum Vitae <script type="text/javascript">
+<!--
+h='&#x73;&#116;&#x6f;&#x61;&#116;&#x65;&#46;&#x63;&#104;';a='&#64;';n='&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#112;&#x65;&#114;&#32;&#x45;&#x2d;&#x4d;&#x61;&#x69;&#108;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#112;&#x65;&#114;&#32;&#x45;&#x2d;&#x4d;&#x61;&#x69;&#108;&#32;&#40;&#114;&#32;&#x61;&#116;&#32;&#x73;&#116;&#x6f;&#x61;&#116;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#104;&#x29;</noscript>.</p>
+<img src="portrait.jpg" alt="Portrait" class="portrait" /> <!-- srcset='portrait.jpg 2x' -->
+<div>
+<dl>
+<dt>Name</dt>
+<dd>Ron Burch
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt>Erfahrung</dt>
+<dd>15 Jahre Erfahrung in der Softwareentwicklung für Webagenturen und industrielle Grossunternehmen. Breites Grundwissen mit Vertiefung in Web- und Mobilapplikationen. Planung, Management, Testing und Umsetzung komplexer Softwarelösungen. Realisation diverser Projekte für Kunden in verschiedensten Branchen. Automatisierung firmeninterner Prozesse. Implementation, Design und Planung eigener <a href="#projekte">App</a> für Android und iOS.
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt>Studium</dt>
+<dd><p>Hochschule Luzern — Technik &amp; Architektur</p>
+<p>Bachelor of Science in Software Engineering (mit Vertiefung in Software Systems)</p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt>Selbststudium</dt>
+<dd><p>Design und Usability Grundlagen</p>
+<p>Finanzmärkte und wirtschaftliche Grundlagen</p>
+<p>Cryptocurrencies Technologie und Trading</p>
+<p>Machine Learning Grundlagen und Implementation eigener neuronaler Netzwerke</p>
+<p>Projektumsetzung mit prototypenbasierter Entwicklung</p>
+<p>Generatives End-to-End Testing von Applikationen und Services</p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt>Geboren</dt>
+<dd>1988 in Zug
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt>Sprachen</dt>
+<dd><p>Deutsch (Muttersprache)</p>
+<p>Englisch (Hauptsprache, zwölf Jahre tägliche praktische Anwendung)</p>
+</dd>
+</dl>
+</div>
+<p><script type="text/javascript">
+<!--
+h='&#x73;&#116;&#x6f;&#x61;&#116;&#x65;&#46;&#x63;&#104;';a='&#64;';n='&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail button">'+'&#x2709;&#xfe0f;&#32;&#160;&#32;&#x4f;&#102;&#102;&#x65;&#114;&#116;&#x65;&#32;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#x65;&#114;&#110;&#x21;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x2709;&#xfe0f;&#32;&#160;&#32;&#x4f;&#102;&#102;&#x65;&#114;&#116;&#x65;&#32;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#x65;&#114;&#110;&#x21;&#32;&#40;&#114;&#32;&#x61;&#116;&#32;&#x73;&#116;&#x6f;&#x61;&#116;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#104;&#x29;</noscript></p>
+</div>
+</section>
+<section id="projekte" class="level1">
+<h1>Projekte</h1>
+<div>
+<p>Da Ron in verschiedensten Projekten gearbeitet hat, wird hier nur auf wichtigsten eingegangen. Als allround Webentwickler und Projektmanager hat Ron die folgenden Projekte umgesetzt, geplant und gemanaged.</p>
+<!-- <figure>
+![Pro Senectute](pro-senectute.svg)
+![Cuboid Logo](cuboid.svg)
+</figure> -->
+<p><a href="https://www.prosenectute.ch" target="_blank"><img src="pro-senectute.svg" alt="Pro Senectute" class="dark-bg" /></a></p>
+<p>Das interne Pro Senectute Reporting Tool ermöglicht die Erfassung verschiedenster Werte in hierarchischer Form. Daten der bestehenden Lösung wurden vollständig migriert. Ron hat die Planung und Umsetzung des Projektes in einem dreiköpfigen Team übernommen und in Zusammenarbeit mit dem Kunden die initialen Requirements festgelegt.</p>
+<p><a href="https://www.coople.com" target="_blank"><img src="coople.png" alt="Coople" class="dark-bg" /></a></p>
+<p>Für Coople (damals Staff-Finder) hat Ron die Weiterentwicklung, Maintenance und Planung der Webapplikation übernommen und war in ständigem Kundenkontakt und Projektmanagement involviert. Coople ermöglicht es Firmen Temporärjobs auszuschreiben und gezielt Arbeitssuchende Fachkräfte in der Umgebung zu finden.</p>
+<!-- <figure> -->
+<!-- ![Cuboid Screenshot 1](cuboid_screenshot-1.jpg){}\ -->
+<p><a href="https://itunes.apple.com/us/app/cuboid/id1273812602?ls=1&amp;mt=8" target="_blank"><img src="cuboid.png" alt="Cuboid Logo" /></a> <!-- ![Cuboid Screenshot 2](cuboid_screenshot-2.jpg){}\ --> <!-- </figure> --></p>
+<p>In den letzten zwei Jahren hat Ron seinen Entwicklungsprozess perfektioniert und neue Technologien für die Entwicklung von mobilen Applikationen erlernt. Das Ergebnis dieses Prozesses ist eine App für iOS und Android, die mehrdimansionale Daten visualisiert und filtert. Diese App ist auf dem Google Play Store und iOS App Store verfügbar und stellt ein Proof of Concept der neu erlernten Fähigkeiten dar. Dadurch ist eine sehr effektive und benutzerfreundliche Arbeitsweise, welche native Apps zu tiefen Kosten (vergleichbar mit Webapplikationen) gewährleistet.</p>
+</div>
+</section>
+<section id="technologie" class="level1">
+<h1>Technologie</h1>
+<div>
+<p>Ron hat sich zwei Jahre Zeit genommen um die idealen Technologien für die mobile Applikationsentwicklung zu finden und diese zu erlernen. Dabei wurde auf folgende Anforderungen Rücksicht genommen: Effiziente Entwicklung, Integration in bestehende Softwarelösungen, die Möglichkeit auf bestehendes Fachwissen im Webbereich zurückzugreifen und ein nativer Look &amp; Feel, ohne auf Platformunabhängigkeit zu verzichten.</p>
+<p>Auf dem Smartphone wird die Applikation in <a href="http://clojurescript.org" target="_blank">ClojureScript</a> auf Basis von <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> umgesetzt. Serverseitig wird ein bestehendes System erweitert oder ein neuer auf der <a href="https://www.java.com" target="_blank">Java Virtual Machine</a> basierender Service entwickelt.</p>
+<figure>
+<img src="react.svg" alt="React Native" /><br />
+<img src="ios.svg" alt="iOS" /><br />
+<img src="android.svg" alt="Android" /><br />
+<img src="java.svg" alt="Java Server" />
+</figure>
+<h2 id="effiziente-entwicklung">Effiziente Entwicklung</h2>
+<p>Der moderne Softwareentwicklungsprozess ist leider häufig ineffizient und bürokratisch. Dies hemmt die Flexibilität und bewirkt eine massive Kostenerhöhung. Mit dem Einsatz von <a href="http://clojurescript.org" target="_blank">ClojureScript</a> wird die Komplexität und Bürokratie so weit wie möglich begrenzt. Diese Programmiersprache ermöglicht einen interaktiven Entwicklungsprozess, bei dem Fehlentscheide früh erkannt werden.</p>
+<h2 id="integration-in-bestehende-softwarelösungen">Integration in bestehende Softwarelösungen</h2>
+<p><a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> erlaubt es bestehende Mobile Applikationen zu erweitern. Eine komplette Neuentwicklung ist somit nicht notwendig.</p>
+<p>Bestehende serverseitige Lösungen können integriert oder erweitert werden. <a href="http://clojure.org" target="_blank">Clojure</a> kann direkt auf bestehende Java Bibliotheken oder Applikationen zugreifen.</p>
+<h2 id="bestehendes-fachwissen-in-der-webentwicklung">Bestehendes Fachwissen in der Webentwicklung</h2>
+<p>Da <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> auf Webtechnologien basiert, ist der verfügbare Pool von Fachkräften sehr gross. Erfahrung in der Webentwicklung reicht um produktiv Applikationen zu entwickeln.</p>
+<p>Designs können direkt von CSS Vorlagen übernommen werden, ohne die nativen Layout Engines separat zu erlernen.</p>
+<h2 id="nativer-look-feel-trotz-platformunabhängigkeit">Nativer Look &amp; Feel trotz Platformunabhängigkeit</h2>
+<p>Eine qualitativ hochwertige Applikationen unterscheidet sich, hauptsächlich durch eine native Benutzerfreundlichkeit, von billiger Massenware. <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> erlaubt es die App tief in das iOS oder Android System zu integrieren. Animationen und Benutzerinteraktionen sind identisch zu nativ entwickelten Apps.</p>
+</div>
+</section>
+<section id="methodik" class="level1">
+<h1>Methodik</h1>
+<div>
+<p>Einer der grossen Problembereiche in der Softwareentwicklung ist eine unklare Kommunikationsweise. Kunde und Entwickler haben unterschiedliche Vorstellungen von Requirements und reden aneinander vorbei. Damit eine zeitnahe sowie nachhaltende Softwareentwicklung gewährleistet werden kann, ist es wichtig, dass der Entwicklungsstand und die Funktionsweise jederzeit für den Kunden ersichtlich ist.</p>
+<p><img src="iterative-development.svg" alt="Iterative Development" class="iterative" /></p>
+<p>Um dieses Ziel zu erreichen, hat sich über die Jahren die iterative Entwicklung bewährt. Nach einer kurzen Planungsphase am Anfang des Projektes wird das Produkt schrittweise umgesetzt. Nach jedem dieser Schritte (auch Iterationen genannt) kann der Kunde den Fortschritt überprüfen und auf die weitere Entwicklung Einfluss nehmen. Die Schrittdauer kann von einem Tag bis zu einer Woche flexibel auf das jeweilige Projekt angepasst werden.</p>
+<p>Dies ermöglicht eine frühe Problemerkennung und flexible Adaption auf sich ändernde Anforderungen. Traditionell geführte Projekte reagieren wesentlich fragiler auf diese Begebenheiten. Des Weiteren werden Projektfortschritt und Kostenentwicklung wesentlich transparenter.</p>
+</div>
+</section>
+</main>
+<footer>
+©  Ron Burch | 2018
+</footer>
+</body>
+</html>
